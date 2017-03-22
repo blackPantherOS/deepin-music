@@ -247,7 +247,7 @@ void MusicItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &opt
     auto meta = MediaLibrary::instance()->meta(hash);
     if (meta.isNull()) {
         QString msg = "can not find " + hash;
-        qFatal(msg.toStdString().c_str());
+        qFatal("%s", msg.toStdString().c_str());
     }
 
     for (int col = 0; col < ColumnButt; ++col) {
